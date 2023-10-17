@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block customstylesheet %}
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+{% endblock %}
+
 {% block main %}
-    <link rel="stylesheet" href="../../public/assets/css/login.css">
+    {% block menu %}{% endblock %}
 
     <form method="POST" action="#" class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -18,3 +22,5 @@
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018 <a href="{{ path('app_front') }}">main page</a></p>
     </form>
 {% endblock %}
+
+{% block footer_links %}{% endblock %}

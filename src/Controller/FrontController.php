@@ -33,19 +33,11 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/search-results", name="app_search_results")
+     * @Route("/search-results", methods={"POST"}, name="app_search_results")
      */
     public function searchResults(): Response
     {
         return $this->render('front/search_results.html.twig');
-    }
-
-    /**
-     * @Route("/register", name="app_register")
-     */
-    public function register(): Response
-    {
-        return $this->render('front/register.html.twig');
     }
 
     /**
@@ -57,11 +49,11 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/payment", name="app_payment")
+     * @Route("/register", name="app_register")
      */
-    public function payment(): Response
+    public function register(): Response
     {
-        return $this->render('front/payment.html.twig');
+        return $this->render('front/register.html.twig');
     }
 
     /**
@@ -71,4 +63,13 @@ class FrontController extends AbstractController
     {
         return $this->render('front/login.html.twig');
     }
+
+    /**
+     * @Route("/payment", name="app_payment")
+     */
+    public function payment(): Response
+    {
+        return $this->render('front/payment.html.twig');
+    }
+
 }
