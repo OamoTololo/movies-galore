@@ -1,9 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-    <?php
-$sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,289029793,60594348,290253648];
-?>
+    {% set sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,289029793,60594348,290253648] %}
     <main role="main">
 
         <section class="jumbotron text-center">
@@ -49,11 +47,11 @@ $sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,28
             <div class="container">
 
                 <div class="row">
-                    <?php foreach($sample_videos as $video): ?>
+                   {% for video in sample_videos %}
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <div align="center" class="embed-responsive embed-responsive-16by9">
-                                <iframe class="" src="https://player.vimeo.com/video/<?=$video?>" frameborder="0"
+                                <iframe class="" src="https://player.vimeo.com/video/{{ video }}" frameborder="0"
                                         allowfullscreen></iframe>
                             </div>
                             <div class="card-body">
@@ -77,14 +75,14 @@ $sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,28
                                         <!-- <button data-toggle="tooltip" data-placement="top" title="You don't like the video. Click to undo" type="button" class="btn btn-primary btn-outline-danger btn-sm mr-2">
                                         <i class="fa fa-thumbs-down"></i>
                                         </button> -->
-                                        <a href="video_details.html.twig#video_comments">Comments (32)</a>
+                                        <a href="{{ path('app_video_details') }}#video_comments">Comments (32)</a>
                                     </div>
                                     <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php endforeach; ?>
+                    {% endfor %}
 
                     <!-- no members -->
                     <div class="col-md-4">
@@ -95,7 +93,8 @@ $sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,28
                             </div>
                             <div class="card-body">
                                 <h3>Video title</h3>
-                                <p class="card-text text-danger">Video for <b>MEMBERS</b> only. <a href="pricing.html.twig">Sign
+                                <p class="card-text text-danger">Video for <b>MEMBERS</b> only. <a href="{{ path('app_pricing')
+                                    }}">Sign
                                         up</a> for one month for free.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -103,7 +102,7 @@ $sample_videos = [289729765,238902809,150870038,219727723,289879647,261379936,28
                                         <i class="fa fa-thumbs-up mr-2"><small class="text-muted">(23)</small></i>
                                         <i class="fa fa-thumbs-down mr-2"><small class="text-muted">(9)</small></i>
 
-                                        <a href="video_details.html.twig#video_comments">Comments (32)</a>
+                                        <a href="v{{ path('app_video_details') }}#video_comments">Comments (32)</a>
                                     </div>
                                     <small class="text-muted">9 mins</small>
                                 </div>
