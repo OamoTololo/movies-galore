@@ -3,11 +3,17 @@
     "css/dashboard": {
       "js": [
         "/assets/runtime.js"
+      ],
+      "css": [
+        "/assets/css/dashboard.css"
       ]
     },
     "css/login": {
       "js": [
         "/assets/runtime.js"
+      ],
+      "css": [
+        "/assets/css/login.css"
       ]
     }
   }
