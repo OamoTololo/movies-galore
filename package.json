@@ -1,0 +1,22 @@
+{
+  "name": "movies-galore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OamoTololo/movies-galore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OamoTololo/movies-galore/issues"
+  },
+  "homepage": "https://github.com/OamoTololo/movies-galore#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^4.4.0"
+  }
+}
