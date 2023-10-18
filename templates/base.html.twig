@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
     <style>
@@ -18,6 +18,9 @@
 
     {% block customstylesheet %}
         <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+
     {% endblock %}
 
     <title>{% block title %}Movies Galore{% endblock %}</title>
@@ -41,7 +44,7 @@
                 <a class="p-2 text-dark" href="{{ path('app_video_list') }}">Unbelievable</a>
                 <a class="p-2 text-dark" href="{{ path('app_video_list') }}">Inspirational</a>
                 <a class="p-2 text-dark" href="{{ path('app_video_list') }}">Motivating</a>
-                <a class="p-2 text-dark" href="admin/my_profile.php">My account</a>
+                <a class="p-2 text-dark" href="{{ path('app_admin') }}">My account</a>
             </nav>
             <a class="btn btn-outline-primary mr-2" href="{{ path('app_pricing') }}">Sign up</a>
             <a class="btn btn-outline-primary" href="{{ path('app_login') }}">Sign in</a>
